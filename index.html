@@ -37,11 +37,13 @@
   <script>
 
     const urlParams = new URLSearchParams(window.location.search);
-    let agency_id = urlParams.get('agency_id');
-    
+    const agency_id = urlParams.get('agency_id');
+    const isTEC = urlParams.get('isTEC');
+
     var paveChat = new PaveChat({
       container: '#app',
       agency_id: agency_id ?? '8b09a1a1-0a8f-4aed-ac56-d3a0244a8d47',
+      isTECform: isTEC,
     });
   </script>
 </html>
