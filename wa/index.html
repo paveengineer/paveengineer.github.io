@@ -33,17 +33,12 @@
     </main>
   </body>
 
-  <script src="https://livechat.yourpave.com/v1/js/pave-live-chat.js"></script>
+  <script src="https://livechat.yourpave.com/v1/js/pave-wa.js"></script>
   <script>
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const agency_id = urlParams.get('agency_id');
-    const isTEC = urlParams.get('isTEC');
-
-    var paveChat = new PaveChat({
+    var paveChat = new PaveWhatsApp({
       container: '#app',
-      agency_id: agency_id ?? '8b09a1a1-0a8f-4aed-ac56-d3a0244a8d47',
-      isTECform: isTEC,
+      phone: '639173096772',
+      text: 'I checked the website and I have question to ask',
     });
   </script>
 </html>
