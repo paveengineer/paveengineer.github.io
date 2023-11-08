@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pave Engineer</title>
+     <link rel="stylesheet" href="https://livechat.yourpave.com/v1/css/pave-live-chat.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #app {
+        font-family: Poppins;
+      }
+      #app h1 {
+        font-weight: 200;
+        text-align: center;
+      }
+      #app h3 {
+        font-weight: 200;
+        text-align: center;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="app">
+      <h1>Pave Engineering Environment</h1>
+      <h3>Pave Live Chat Demo - Production</h3>
+    </main>
+  </body>
+
+  <script src="https://livechat.yourpave.com/v1/js/pave-live-chat.js"></script>
+  <script>
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const agency_id = urlParams.get('agency_id');
+    const isTEC = urlParams.get('isTEC');
+
+    var paveChat = new PaveChat({
+      container: '#app',
+      agency_id: agency_id ?? '8b09a1a1-0a8f-4aed-ac56-d3a0244a8d47',
+      isTECform: isTEC,
+    });
+  </script>
+</html>
